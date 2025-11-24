@@ -67,7 +67,7 @@ jobs:
       # 2. 更新 submodule 指到最新提交
       - name: Update submodule to latest
         run: |
-          cd ./         # ✅ 顶层 repo 中 submodule 的路径
+          cd Resources         # ✅ 顶层 repo 中 submodule 的路径
           git fetch origin master         # ✅ submodule 默认分支
           git checkout origin/master
           cd -
@@ -75,7 +75,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-          git add path/to/submodule
+          git add Resources
           git commit -m "chore: bump submodule to latest" || echo "No changes to commit"
           git push origin master          # ✅ 顶层 repo 默认分支
 ```
