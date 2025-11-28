@@ -119,3 +119,4 @@ jobs:
           git commit -m "Update sitemap" || echo "No changes to commit"
           git push
 ```
+3. Commit the code to github. 
